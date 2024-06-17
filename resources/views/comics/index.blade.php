@@ -15,9 +15,8 @@
                             <p>{{ $curComic->type }}</dp>
                             <p>{{ $curComic->price }}</p>
                             <p>{{ $curComic->sale_date }}</p>
-                            <div class="d-flex justify-content-center">
-                                <a href="{{ route('comics.show', ['comic' => $curComic->id]) }}" class="btn btn-primary">Leggi la descrizione</a>
-                            </div>
+                            <a href="{{ route('comics.show', ['comic' => $curComic->id]) }}" class="btn btn-primary mb-2">Leggi i dettagli</a>
+                            <a href="{{route('comics.edit', ['comic' => $curComic->id])}}" class="btn btn-secondary mb-2">Modifica i Dettagli</a>
                         </div>
                     </div>
                 </div>
