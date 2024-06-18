@@ -20,6 +20,11 @@
                             <p>{{ $curComic->sale_date }}</p>
                             <a href="{{ route('comics.show', ['comic' => $curComic->id]) }}" class="btn btn-primary mb-2">Leggi i dettagli</a>
                             <a href="{{route('comics.edit', ['comic' => $curComic->id])}}" class="btn btn-secondary mb-2">Modifica i Dettagli</a>
+                            <form action="{{ route('comics.destroy', $curComic->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger" type="submit">Cancella</button>
+                            </form>
                         </div>
                     </div>
                 </div>
