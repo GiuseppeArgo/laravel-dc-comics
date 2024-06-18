@@ -31,9 +31,23 @@ class ComicController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(StoreComicRequest $request)
-    //controllo dati
-    
     {
+        //Controllo dati
+        // $request->validate([
+        //     'title' => ['required', 'min:3'],
+        //     'description' => ['min:10'],
+        //     'price' => ['required', 'min:1'],
+        //     'series' => ['required', 'min:1'],
+        //     'sale_date' => ['required'],
+        // ], [ 
+        //     'title.required' => 'Il titolo non può essere vuoto',
+        //     'description.required' => 'La descrizione non pò essere vuota',
+        //     'price.required' => 'Scegli un prezzo',
+        //     'series.required' => 'Indica la serie di appartenenza',
+        //     'sale_date' => 'Seleziona una data'
+        // ]);
+
+
         $data = $request->all();
         $comics = new Comic();
         $comics->fill($data);

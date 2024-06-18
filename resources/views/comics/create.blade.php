@@ -21,6 +21,9 @@
                 <label for="title" class="form-label">Titolo:</label>
                 <input type="text" class="form-control" id="title" placeholder="Action Comics #1000: The Deluxe Edition"
                     name="title" required>
+                <div id="title-error" class="invalid-feedback">
+                    Il titolo non può essere vuoto
+                </div>
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione:</label>
