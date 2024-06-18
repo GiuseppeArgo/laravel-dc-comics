@@ -3,7 +3,10 @@
 @section('content')
 
     <div class="container pt-5">
+        <div class="d-flex justify-content-between align-items-center mb-5">
         <h1 class="mb-5">Lista Fumetti</h1>
+        <a href="{{ route('comics.create') }}" class="btn btn-secondary">Crea nuovo Fumetto</a>
+        </div>
         <div class="row g-5 d-flex justify-content-center align-items-center">
             @foreach ($comicsList as $curComic)
                 <div class="col">
